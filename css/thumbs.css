@@ -1,0 +1,65 @@
+.thumbs_wrapper{
+    display: flex;
+    flex-wrap: wrap; /*1차원 정렬을 여러 행으로 할 수 있다*/
+    justify-content: space-between;
+    margin: 60px 0 0 200px;
+    padding: 20px 0 0 10px;
+}
+.thumbs_item{
+    width: 25%;
+    margin: 0 0 15px 0;
+    padding: 0 10px;
+}
+.thumbs_thumbnail{
+    max-width: 100%; /*부모(item) 25%안에 들어옴*/
+    margin: 0 0 10px 0;
+}
+.thumbs_info{
+    display: flex;
+}
+.thumbs_profile{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: tomato;
+}
+.thumbs_text{
+    width: calc(100% - 36px); /*profile영역 제외한 너비*/
+    padding-left: 10px;
+}
+.thumbs_text-title{
+    font-size: 1.2rem;
+    margin-bottom: 0.5em;
+}
+.thumbs_text-owner{
+    font-size: 1rem;
+    color: #aeaeae;
+    margin-bottom: 0.2em;
+}
+.thumbs_text-anal{
+    font-size: 0.9rem;
+    color: #aeaeae;
+}
+
+@media screen and (max-width:1000px){
+    .thumbs_item{
+        width: 33%;
+    }
+}
+@media screen and (max-width:800px){
+    .thumbs_wrapper{
+        margin: 60px 0 0 60px; /*네비 작아졌으므로 margin-left:60px 으로 줌*/
+    }
+    .thumbs_item{
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px){
+    .thumbs_wrapper{
+        margin: 60px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+    .thumbs_item{
+        width: 100%;
+    }
+}

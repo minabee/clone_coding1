@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px #000; /*경계선*/
+    z-index: 20; /*겹쳤을 때 가장 위에*/
+}
+.header_wrapper{
+    display: flex; /*자식 1차원(가로) 정렬*/
+    align-items: center; /*세로축에서의 정렬방법(가운데)*/
+    justify-content: space-between; /*가로축에서의 정렬방법(양끝으로 펼침)*/
+    height: 60px;
+    padding: 0 16px;
+}
+.header_start{
+    height: 40px;
+    line-height: 40px;
+}
+.header_hamburger{
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem; /*16 x 1.5 = 24px*/
+}
+.header_title{
+    font-size: 1.5rem;
+    margin-left: 6px;
+    font-family: 'Gulzar', serif;
+}
+.header_center{
+    width: 50%;
+}
+.header_form{
+    display: flex;
+    max-width: 100%; /*50%인 header_center에서 크기까지 같이 따라가게*/
+}
+.header_input-text{
+    width: calc(100% - 60px); /*검색버튼(60px으로 지정) 빼고 모두*/
+    height: 40px;
+    border: 1px solid #8f8f8f;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+}
+.header_input-button{
+    width: 60px;
+    height: 40px;
+    border: 1px solid #8f8f8f;
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+.header_input-button:hover{
+    background-color: #bbb;
+    color: #fff;
+}
+.header_end{
+    display: flex;
+}
+.header_search{
+    display: none;
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+.header_profile{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    background-image: url(../imgs/tkwls1.png);
+    background-size: 50px 50px; /*너비 높이*/
+}
+
+@media screen and (max-width: 800px){
+    .header_title{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .header_center{
+        display: none;
+    }
+    .header_search{
+        display: block;
+    }
+}
